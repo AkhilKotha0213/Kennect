@@ -1,0 +1,38 @@
+var x=1423;
+console.log("Is the given number prime:"+CheckPrime(x));
+var np=findNextPrimeNum(x);
+console.log("The difference between the given number and the next prime number is : "+(np-x));
+function findNextPrimeNum(prime) {
+    if(prime%2==0)
+    {
+        for (var count = prime + 1; ; count=count+2) {
+        if (CheckPrime(count)) {
+            break;
+        }
+     }
+     
+    }
+    else
+    {
+        for (var count = prime+2; ; count=count+2) {
+        if (CheckPrime(count)) {
+            break;
+        }
+     }
+    }
+      
+
+    return count;
+}
+
+function CheckPrime(num) {
+    for (var i = 2; i < Math.sqrt(num) + 1; ++i) {
+        if (num % i === 0) {
+            return false;
+        }
+    }
+    if(num!==1)
+    {
+    return true;
+    }
+}
