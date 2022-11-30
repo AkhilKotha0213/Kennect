@@ -1,0 +1,36 @@
+Assignment 4.2
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .important
+        {
+          background-color: pink;
+        }
+        .shape
+        {
+          font-weight: bold;
+          background-color: blue;
+        }
+      </style>
+</head>
+<body>
+    <div id="john">
+        <input type="text" placeholder="focus event" id="name" class="important"><br>
+        <input type="text" placeholder="non focus event" id="name" class="notimportant"><br>
+        <input type="text" id="name" class="notimportant"><br>
+      </div>
+      <script>
+        const eve = document.querySelector('input[class="important"]');
+        eve.addEventListener('focus',(e) => {
+          e.target.classList.add('shape');
+        });
+      </script>
+</body>
+</html>
