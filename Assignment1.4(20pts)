@@ -1,0 +1,27 @@
+Q) Explain JWT in Approx and it's top three benefits
+
+A)     What is JWT
+
+   * JWT(JSON Web Token) is a JSON object which is mainly used for autherization(to securely transfer information over the web using RFC 7519 standard)
+   * JWT is used for authentication system and can be used for exachange of information.
+   * JWT autherization is more secured than the traditional session token authentication(uses cookies for authentication data)
+     because it uses encrypted JSON web tokens for authentication
+   
+      How JWT works
+   * During user login system, user logins through client(Browser) by posting the login service to the client(browser) like email id and password and this login request
+     will be sent to the server. The server creates JWT with a secret key for the request and send it back to the browser(client) which can be stored in different ways
+     (e.g cookie). Now if the user send any other request to the server with the JWT, server will check the JWT with secret key and authenticates the user. 
+   * JWT mainly consists of 
+                            1) Header
+                            2) Payload
+                            3) Signature
+   * The encoded version of token contains encoded charcters seperated by "."
+   * Header:    consists of algorithim to encode and decodes the JWT and the type(here it is JWT).
+   * Payload:   consists all th information stored in the token.
+   * Signature: consists of secret key for verification.
+   
+     Advantages
+     
+   * Authentication for multiple requests from the same or sub server can be done automatically without logging in again using JWT.
+   * Authentication will be done automatically for different sessions since the JWT stores in the browser(client).
+   * Used in micro services.
